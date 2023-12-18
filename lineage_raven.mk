@@ -13,7 +13,6 @@ $(call inherit-product, device/google/raviole/aosp_raven.mk)
 $(call inherit-product, device/google/gs101/lineage_common.mk)
 
 include device/google/raviole/raven/device-lineage.mk
-include vendor/gms/common/common-vendor.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -34,7 +33,7 @@ MATRIXX_DISPLAY := 1080x2400
 TARGET_HAS_UDFPS := true
 
 # Gms apps
-WITH_GMS := true
+WITH_GAPPS := true
 TARGET_PREBUILT_PIXEL_LAUNCHER := true
 # Ship pixel features (adaptivecharging, dreamliner etc)
 TARGET_ENABLE_PIXEL_FEATURES := true
