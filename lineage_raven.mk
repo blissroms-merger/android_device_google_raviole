@@ -13,6 +13,7 @@ $(call inherit-product, device/google/raviole/aosp_raven.mk)
 $(call inherit-product, device/google/gs101/lineage_common.mk)
 
 include device/google/raviole/raven/device-lineage.mk
+include vendor/gms/common/common-vendor.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -30,10 +31,19 @@ MATRIXX_MAINTAINER := H311Hound
 MATRIXX_CHIPSET := Tensor_G1
 MATRIXX_BATTERY := 5003mAh
 MATRIXX_DISPLAY := 1080x2400
-WITH_GAPPS := true
-EXTRA_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
 TARGET_HAS_UDFPS := true
+
+# Gms apps
+WITH_GMS := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := true
+# Ship pixel features (adaptivecharging, dreamliner etc)
+TARGET_ENABLE_PIXEL_FEATURES := true
+# Use google telephony framework
+TARGET_USE_GOOGLE_TELEPHONY := true
+# Use gs101 hotword blobs
+TARGET_PREBUILT_GOOGLE_CAMERA := true
+TARGET_PREBUILT_HOTWORD := true
+TARGET_PREBUILT_HOTWORD_TYPE := tensor_gs101
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
