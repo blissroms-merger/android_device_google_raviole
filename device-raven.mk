@@ -287,6 +287,14 @@ else
 		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=24m \
+    dalvik.vm.heapgrowthlimit=384m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.42 \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heapmaxfree=56m
+
 # Enable DeviceAsWebcam support
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
