@@ -31,18 +31,10 @@ MATRIXX_CHIPSET := Tensor_G1
 MATRIXX_BATTERY := 5003mAh
 MATRIXX_DISPLAY := 1080x2400
 TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
 
 # Gms apps
-WITH_GAPPS := true
-TARGET_PREBUILT_PIXEL_LAUNCHER := true
-# Ship pixel features (adaptivecharging, dreamliner etc)
-TARGET_ENABLE_PIXEL_FEATURES := true
-# Use google telephony framework
-TARGET_USE_GOOGLE_TELEPHONY := true
-# Use gs101 hotword blobs
-TARGET_PREBUILT_GOOGLE_CAMERA := true
-TARGET_PREBUILT_HOTWORD := true
-TARGET_PREBUILT_HOTWORD_TYPE := tensor_gs101
+WITH_GAPPS := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
