@@ -18,6 +18,7 @@ PRODUCT_COPY_FILES += \
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 # PixelParts
 include packages/apps/PixelParts/device.mk
 
