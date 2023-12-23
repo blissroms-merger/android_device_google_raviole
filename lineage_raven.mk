@@ -11,6 +11,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
 $(call inherit-product, device/google/gs101/lineage_common.mk)
+$(call inherit-product-if-exists, vendor/gapps/gms_full.mk)
 
 include device/google/raviole/raven/device-lineage.mk
 
@@ -34,7 +35,11 @@ TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 
 # Gms apps
-WITH_GAPPS := false
+WITH_GMS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_IS_PIXEL := true
+TARGET_IS_PIXEL_6 := true
+TARGET_PIXEL_STAND_SUPPORTED := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
