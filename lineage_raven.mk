@@ -34,7 +34,7 @@ TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 
 # Gms apps
-WITH_GAPPS := true
+WITH_GMS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_IS_PIXEL := true
 TARGET_IS_PIXEL_6 := true
