@@ -13,6 +13,7 @@ $(call inherit-product, device/google/raviole/aosp_raven.mk)
 $(call inherit-product, device/google/gs101/lineage_common.mk)
 
 include device/google/raviole/raven/device-lineage.mk
+include vendor/gms/products/gms.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
@@ -22,7 +23,7 @@ PRODUCT_NAME := lineage_raven
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_PIXEL_BOOT_ANIMATION_RES := 1440
 
 # Matrixx
 MATRIXX_BUILD_TYPE := Official
@@ -34,12 +35,18 @@ TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 
 # Gms apps
-WITH_GMS := true
+BUILD_GMS_OVERLAYS_AND_PROPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_IS_PIXEL := true
-TARGET_IS_PIXEL_6 := true
-TARGET_PIXEL_STAND_SUPPORTED := true
-TARGET_ENABLE_PRIVAPP_ENFORCEMENT := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_GOOGLE_CAMERA := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+#TARGET_IS_PIXEL := true
+#TARGET_IS_PIXEL_6 := true
+#TARGET_PIXEL_STAND_SUPPORTED := true
+#TARGET_ENABLE_PRIVAPP_ENFORCEMENT := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
